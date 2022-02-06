@@ -19,6 +19,12 @@ a{
     justify-content: center;
 }
 
+/* for all img in this site */
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 
 /* hero section */
 #hero {
@@ -108,7 +114,7 @@ a{
 }
 /* keyframes */
 @keyframes text_reveal_box {
-    50% {
+    25% {
         width: 100%;
         left: 0;
     }
@@ -128,4 +134,91 @@ a{
          color: lightblue;
          font-weight: 700;
      }
+ }
+
+/* services section */
+
+#services{}
+#services .services{
+    flex-direction: column;
+    text-align: center;
+    max-width: 67.5rem;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+#services .service-title{
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+
+}
+
+#services .service-title span{
+    color: blueviolet;
+}
+
+#services .service-top p{
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+}
+
+#services .service-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+#services .service-item{
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-image: url(./img/portfolio-img.jpg);
+    background-size: cover;
+    margin: 10px 5%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#services .service-item::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height:100%;
+    width: 100%;
+    background-image:linear-gradient(0deg, rgba(39,38,40,1) 0%, rgba(117,78,143,1) 100%);
+    opacity: .3;
+    z-index: -1;
+}
+ .icon {
+    color: white;
+    font-size: 6rem;
+ }
+
+ #services .service-item h2{
+    font-size: 2rem;
+    color: white;
+    text-transform: uppercase;
+ }
+
+ #services .service-item p{
+     font-size: 1.5rem;
+     color: white;
+     line-height: 2.4rem;
+     text-align: left;
  }
